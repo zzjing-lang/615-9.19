@@ -1,0 +1,22 @@
+---
+title: "615 chickweight 9.19"
+format: pdf
+editor: visual
+---
+
+```{r}
+data(ChickWeight)
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +
+  geom_point() +
+  geom_smooth(se = FALSE)
+
+```
+
+The `ChickWeight`  data records the weights of chicks measured over time under different diets.\
+It contains 578 observations of 4 variables: weight, time, chick ID, and diet.\
+This dataset is commonly used to study growth patterns and compare the effects of diet on development.
